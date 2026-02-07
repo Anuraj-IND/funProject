@@ -1,0 +1,56 @@
+.petals-background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: -20px;
+  left: var(--x, 50vw);
+  width: var(--size, 12px);
+  height: var(--size, 12px);
+  background: var(--color, #ffb6c1);
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(var(--rotation, 0deg)) scale(1.2);
+  animation: fall var(--duration, 18s) var(--delay, 0s) linear infinite;
+  opacity: 0.85;
+  box-shadow: 0 0 4px rgba(255, 182, 193, 0.4);
+}
+
+.petal::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: inherit;
+  filter: blur(2px);
+  opacity: 0.5;
+}
+
+@keyframes fall {
+  0% {
+    top: -20px;
+    transform: rotate(var(--rotation)) translateX(0) scale(1.2);
+    opacity: 0.9;
+  }
+  15% {
+    transform: rotate(calc(var(--rotation) + 90deg)) translateX(var(--sway, 0)) scale(1.1);
+  }
+  30% {
+    transform: rotate(calc(var(--rotation) + 180deg)) translateX(calc(-1 * var(--sway))) scale(1.15);
+  }
+  50% {
+    transform: rotate(calc(var(--rotation) + 270deg)) translateX(var(--sway)) scale(1.05);
+  }
+  70% {
+    transform: rotate(calc(var(--rotation) + 360deg)) translateX(calc(-0.5 * var(--sway))) scale(1);
+  }
+  100% {
+    top: 100vh;
+    transform: rotate(calc(var(--rotation) + 540deg)) translateX(0) scale(0.9);
+    opacity: 0.6;
+  }
+}

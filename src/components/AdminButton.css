@@ -1,0 +1,111 @@
+.admin-button {
+  position: fixed;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  right: max(1rem, env(safe-area-inset-right));
+  z-index: 100;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  background: rgba(255, 255, 255, 0.95);
+  color: #c71585;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(255, 105, 180, 0.25);
+}
+
+.admin-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.admin-modal {
+  background: linear-gradient(145deg, #fff5f8, #ffe8f0);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(199, 21, 133, 0.2);
+  border: 1px solid rgba(255, 182, 193, 0.5);
+}
+
+.admin-modal h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-cursive);
+  color: #c71585;
+  font-size: 1.25rem;
+}
+
+.admin-modal p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.admin-modal input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid rgba(255, 105, 180, 0.3);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.admin-error {
+  color: #c71585;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem !important;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.admin-actions button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid rgba(255, 105, 180, 0.3);
+  background: #fff;
+  color: #c71585;
+  transition: background 0.2s, color 0.2s;
+}
+
+.admin-actions button[type="submit"] {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: #fff;
+  border-color: transparent;
+}
+
+.admin-actions button:hover {
+  background: #ffe8f0;
+  color: #c71585;
+}
+
+.admin-actions button[type="submit"]:hover {
+  background: linear-gradient(135deg, #ff1493, #c71585);
+  color: #fff;
+}

@@ -1,0 +1,173 @@
+.propose-day {
+  margin-top: 1rem;
+}
+
+.propose-intro {
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0 0 1.5rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.propose-ring-box {
+  background: linear-gradient(165deg, #2c1810 0%, #4a2c20 50%, #3d2318 100%);
+  border-radius: 1.25rem;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(139, 90, 43, 0.4);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.propose-open-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(145deg, rgba(60, 35, 25, 0.9), rgba(40, 22, 15, 0.95));
+  border: 1px solid rgba(180, 140, 100, 0.25);
+  border-radius: 1rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  color: #e8d5b5;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.propose-open-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(199, 21, 133, 0.2);
+}
+
+.propose-box-emoji {
+  font-size: 3rem;
+  display: block;
+}
+
+.propose-open-label {
+  font-family: var(--font-cursive);
+  font-size: 1.25rem;
+}
+
+.propose-ring-box.opened .propose-card,
+.propose-ring-box.opened .propose-response {
+  animation: fadeIn 0.4s ease;
+}
+
+.propose-card {
+  background: var(--gradient-card);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 182, 193, 0.4);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  transform-style: preserve-3d;
+  transform: perspective(900px) rotateX(0) rotateY(0);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.propose-card:hover {
+  transform: perspective(900px) rotateX(-2deg) rotateY(2deg) translateZ(6px);
+  box-shadow: 0 16px 40px rgba(199, 21, 133, 0.2);
+}
+
+.propose-question {
+  font-family: var(--font-cursive);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: var(--color-accent);
+  margin: 0 0 0.25rem;
+}
+
+.propose-sub {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 1.5rem;
+}
+
+.propose-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.propose-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: var(--font-body);
+}
+
+.propose-btn.yes {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255, 20, 147, 0.35);
+}
+
+.propose-btn.always {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-accent);
+  border: 2px solid var(--color-soft);
+}
+
+.propose-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+.propose-response {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.propose-response .propose-heart {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+  animation: float 2s ease-in-out infinite;
+}
+
+.propose-response p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 480px) {
+  .propose-intro {
+    font-size: 1rem;
+  }
+
+  .propose-ring-box {
+    padding: 0.75rem;
+  }
+
+  .propose-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .propose-card:hover {
+    transform: perspective(900px) translateZ(4px);
+  }
+}

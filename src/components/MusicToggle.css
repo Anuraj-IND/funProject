@@ -1,0 +1,30 @@
+.music-toggle {
+  position: fixed;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  left: max(1rem, env(safe-area-inset-left));
+  z-index: 100;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-toggle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(255, 105, 180, 0.2);
+}
+
+.music-toggle.playing {
+  background: rgba(255, 182, 193, 0.4);
+  border-color: rgba(255, 105, 180, 0.5);
+}

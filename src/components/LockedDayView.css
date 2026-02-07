@@ -1,0 +1,91 @@
+.locked-day-view {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+}
+
+.locked-day-card {
+  background: var(--gradient-card);
+  border-radius: 1.5rem;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid rgba(255, 182, 193, 0.5);
+  box-shadow: var(--shadow-soft);
+  filter: blur(0);
+}
+
+@media (max-width: 480px) {
+  .locked-day-view {
+    padding: 1rem 0.75rem;
+  }
+
+  .locked-day-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .locked-day-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.locked-day-card .locked-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.locked-day-card h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+  color: var(--color-accent);
+}
+
+.locked-date {
+  color: #888;
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.locked-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 182, 193, 0.3);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.locked-badge .lock-icon {
+  font-size: 1.1rem;
+}
+
+.locked-message {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.locked-back {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: #fff;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.locked-back:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}

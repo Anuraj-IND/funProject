@@ -1,0 +1,92 @@
+.rose-day {
+  margin-top: 1rem;
+}
+
+.rose-intro {
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0 0 1.5rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rose-bouquet-box {
+  background: linear-gradient(165deg, #8b2942 0%, #a83252 40%, #8b2942 100%);
+  border-radius: 1.25rem;
+  padding: 0.75rem;
+  overflow: hidden;
+  box-shadow:
+    0 8px 24px rgba(139, 41, 66, 0.35),
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(200, 100, 130, 0.4);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.rose-bouquet-lid {
+  text-align: center;
+  font-family: var(--font-cursive);
+  font-size: 1.15rem;
+  color: #ffd4e0;
+  margin-bottom: 0.5rem;
+  padding: 0.35rem 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.rose-reveal-area {
+  background: var(--gradient-card);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 182, 193, 0.4);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.rose-reveal-area:hover {
+  transform: scale(1.01);
+  box-shadow: var(--shadow-glow);
+}
+
+.rose-tap-hint {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-cursive);
+  font-size: 1.2rem;
+  color: var(--color-soft);
+  text-align: center;
+}
+
+.rose-message {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 1rem 0 0;
+  text-align: center;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 480px) {
+  .rose-intro {
+    font-size: 1rem;
+  }
+
+  .rose-bouquet-box {
+    padding: 0.6rem;
+  }
+
+  .rose-reveal-area {
+    padding: 0.875rem;
+  }
+
+  .rose-message {
+    font-size: 0.95rem;
+    padding: 0 0.25rem;
+  }
+}

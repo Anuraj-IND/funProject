@@ -1,0 +1,37 @@
+.rose-scene-container {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 248, 252, 0.6) 0%, rgba(255, 228, 236, 0.3) 100%);
+  border: 1px solid rgba(255, 182, 193, 0.4);
+  box-shadow: 0 4px 24px rgba(199, 21, 133, 0.15);
+}
+
+.rose-scene-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 280px !important;
+}
+
+.rose-scene-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-cursive);
+  color: var(--color-soft);
+  font-size: 1.1rem;
+}
+
+.rose-scene-container.compact {
+  min-height: 200px;
+  height: 200px;
+}
+
+.rose-scene-container.compact canvas {
+  height: 200px !important;
+  min-height: 200px !important;
+}
